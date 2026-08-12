@@ -5,10 +5,12 @@ import ChatbotPopup from "./components/ChatbotPopup";
 
 export default function Home() {
   return (
-    <div className="bg-black text-white">
+    <div className="relative overflow-hidden bg-slate-950 text-slate-100">
       <Hero />
-      <Skills />
-      <Projects />
+      <main className="space-y-24">
+        <Skills />
+        <Projects />
+      </main>
       <ChatbotPopup />
     </div>
   );
