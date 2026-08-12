@@ -1,43 +1,68 @@
-export const adithyanContext = `
-NAME:
-Adithyan
+export const adithyanContext = {
+  name: "Adithyan K S",
 
-ROLE:
-Frontend Engineer
+  role: "Frontend Engineer",
 
-PROFESSIONAL EXPERIENCE:
-- 3 years of professional experience
-- Previously worked at dbiz.ai, Kochi
-- Currently seeking frontend roles in Bangalore
-- Salary expectation: 10 LPA
+  experience: "3 years of professional experience",
 
-TECHNICAL SKILLS:
-- React.js
-- JavaScript
-- Redux Toolkit
-- HTML/CSS
-- Next.js
-- Drupal CMS
+  previousCompany: "dbiz.ai",
 
-PROJECT: Employee Experience Platform
-Duration: March 2023 - July 2026
-- Enterprise survey platform for HR teams
-- Built 20+ reusable React components
-- Used React.js, Redux, and REST APIs
-- Developed forms, tables, modals, and UI components
-- Implemented component memoization and lazy loading
+  previousLocation: "Kochi",
 
-PROJECT: Feedback360 Analytics Platform
-- Interactive employee performance dashboards
-- Implemented filtering, search, and pagination for large datasets
-- Implemented PDF and PowerPoint export functionality
-- Used React.js, Redux, and Ant Design Charts
-- Built reusable dashboard widgets
+  preferredLocation: "Bangalore",
 
-PROJECT: Survey Management Portal
-- Multi-step survey creation workflow
-- Dynamic questionnaire management with autosave
-- Role-based access control for admins and managers
-- Optimized forms with 100+ configurable fields
-- Used React Hooks, Redux, and JavaScript
-`;
+  salaryExpectation: "10 LPA",
+
+  skills: [
+    "React.js",
+    "JavaScript",
+    "Redux Toolkit",
+    "HTML",
+    "CSS",
+    "Next.js",
+    "Drupal CMS",
+  ],
+
+  projects: [
+    {
+      name: "Employee Experience Platform",
+      period: "March 2023 - July 2026",
+      description: "Enterprise survey platform for HR teams.",
+      technologies: ["React.js", "Redux", "REST APIs"],
+      contributions: [
+        "Built 20+ reusable React components",
+        "Developed forms, tables, modals, and UI components",
+        "Implemented component memoization",
+        "Implemented lazy loading",
+      ],
+    },
+
+    {
+      name: "Feedback360 Analytics Platform",
+      description: "Interactive employee performance dashboards.",
+      technologies: ["React.js", "Redux", "Ant Design Charts"],
+      contributions: [
+        "Implemented filtering",
+        "Implemented search",
+        "Implemented pagination for large datasets",
+        "Implemented PDF export",
+        "Implemented PowerPoint export",
+        "Built reusable dashboard widgets",
+      ],
+    },
+
+    {
+      name: "Survey Management Portal",
+      description:
+        "Multi-step survey creation and questionnaire management platform.",
+      technologies: ["React Hooks", "Redux", "JavaScript"],
+      contributions: [
+        "Built multi-step survey creation workflow",
+        "Implemented dynamic questionnaire management",
+        "Implemented autosave",
+        "Implemented role-based access control for admins and managers",
+        "Optimized rendering of forms with 100+ configurable fields",
+      ],
+    },
+  ],
+};
