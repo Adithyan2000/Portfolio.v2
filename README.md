@@ -62,9 +62,8 @@ The chatbot uses OpenRouter API with Claude Haiku model.
 
 ## 📞 Contact
 
-- Email: your@email.com
-- LinkedIn: [Your Profile]
-- Location: Open to Bangalore (10 LPA+)
+- Email: ksadithyan.mec@gmail.com
+- LinkedIn: https://www.linkedin.com/in/adithyanks2000/
 
 ## 📝 License
 
