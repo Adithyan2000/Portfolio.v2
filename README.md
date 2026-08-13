@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website with AI Chatbot
 
-## Getting Started
+A full-stack portfolio website featuring an AI-powered chatbot assistant built with React, Next.js, and Claude API.
 
-First, run the development server:
+## 🎯 Features
+
+- **Interactive AI Chatbot** — Ask questions about my projects, skills, and experience
+- **Project Showcase** — 3 production-grade projects with detailed descriptions
+- **Skills Display** — Technologies I specialize in
+- **Dark Theme UI** — Modern, clean design with floating chatbot
+- **Responsive Design** — Works on desktop and mobile
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js, Next.js, Tailwind CSS, JavaScript
+- **Backend:** Next.js API Routes
+- **AI:** Claude API (Haiku Model)
+- **Deployment:** Vercel
+
+## 📦 Projects Included
+
+1. **Employee Experience Platform** — Enterprise survey platform with 20+ reusable React components
+2. **Feedback360 Analytics Platform** — Interactive dashboards with filtering and export functionality
+3. **Survey Management Portal** — Multi-step workflow with role-based access control
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/Adithyan2000/Portfolio.v2
+cd portfolio-ai
+
+# Install dependencies
+npm install
+
+# Create .env.local file
+echo "OPENROUTER_API_KEY=your_api_key" > .env.local
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💬 AI Chatbot Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The chatbot uses OpenRouter API with Claude Haiku model.
 
-## Learn More
+1. Get API key from [OpenRouter](https://openrouter.ai)
+2. Add to `.env.local` as `OPENROUTER_API_KEY`
+3. Chatbot will answer questions based on portfolio context
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Live Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[Visit Portfolio](https://portfolio-v2-sage-three.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📞 Contact
 
-## Deploy on Vercel
+- Email: your@email.com
+- LinkedIn: [Your Profile]
+- Location: Open to Bangalore (10 LPA+)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open source and available under the MIT License.
