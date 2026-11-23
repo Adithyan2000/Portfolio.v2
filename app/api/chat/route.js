@@ -8,6 +8,13 @@ export async function POST(req) {
       return Response.json({ error: "Message is required" }, { status: 400 });
     }
 
+    if (!process.env.OPENROUTER_API_KEY) {
+      return Response.json(
+        { error: "The portfolio assistant is temporarily unavailable." },
+        { status: 503 },
+      );
+    }
+
     const profile = JSON.stringify(adithyanContext, null, 2);
 
     const systemPrompt = `

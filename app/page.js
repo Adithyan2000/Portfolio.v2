@@ -1,17 +1,15 @@
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import ChatbotPopup from "./components/ChatbotPopup";
+import Experience from "./components/Experience";
 
 export default function Home() {
   return (
-    <div className="relative overflow-hidden bg-slate-950 text-slate-100">
+    <main id="main-content">
       <Hero />
-      <main className="space-y-24">
-        <Skills />
-        <Projects />
-      </main>
-      <ChatbotPopup />
-    </div>
+      <Projects />
+      <Skills />
+      <Experience />
+    </main>
   );
 }
