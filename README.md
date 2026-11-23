@@ -1,70 +1,57 @@
-# Portfolio Website with AI Chatbot
+# Adithyan K S — Portfolio v2
 
-A full-stack portfolio website featuring an AI-powered chatbot assistant built with React, Next.js, and Claude API.
+A minimal developer portfolio built with Next.js 16, React 19, and Tailwind CSS 4. It brings frontend experience and an ongoing Python backend learning journey together.
 
-## 🎯 Features
+## Pages
 
-- **Interactive AI Chatbot** — Ask questions about my projects, skills, and experience
-- **Project Showcase** — 3 production-grade projects with detailed descriptions
-- **Skills Display** — Technologies I specialize in
-- **Dark Theme UI** — Modern, clean design with floating chatbot
-- **Responsive Design** — Works on desktop and mobile
+- `/` — introduction, selected projects, about, skills, and professional experience.
+- `/projects` — personal project collection with GitHub links.
+- `/projects/fastapi-backend` — current Python/FastAPI learning project.
+- `/projects/ai-search` — AI Search Autocomplete.
+- `/projects/portfolio` — this website.
 
-## 🛠️ Tech Stack
+The design uses a charcoal palette, green accents, subtle entrance and hover animations, and responsive layouts. Reduced-motion preferences are respected. The portfolio assistant uses a keyboard-accessible native dialog.
 
-- **Frontend:** React.js, Next.js, Tailwind CSS, JavaScript
-- **Backend:** Next.js API Routes
-- **AI:** Claude API (Haiku Model)
-- **Deployment:** Vercel
+## Run locally
 
-## 📦 Projects Included
+Use Node.js 20.9 or newer and npm.
 
-1. **Employee Experience Platform** — Enterprise survey platform with 20+ reusable React components
-2. **Feedback360 Analytics Platform** — Interactive dashboards with filtering and export functionality
-3. **Survey Management Portal** — Multi-step workflow with role-based access control
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v16+)
-- npm or yarn
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Adithyan2000/Portfolio.v2
-cd portfolio-ai
-
-# Install dependencies
-npm install
-
-# Create .env.local file
-echo "OPENROUTER_API_KEY=your_api_key" > .env.local
-
-# Run development server
+```sh
+git clone https://github.com/Adithyan2000/Portfolio.v2.git
+cd Portfolio.v2
+npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open http://localhost:3000.
 
-## 💬 AI Chatbot Setup
+For the optional assistant, create `.env.local`:
 
-The chatbot uses OpenRouter API with Claude Haiku model.
+```env
+OPENROUTER_API_KEY=your_api_key
+```
 
-1. Get API key from [OpenRouter](https://openrouter.ai)
-2. Add to `.env.local` as `OPENROUTER_API_KEY`
-3. Chatbot will answer questions based on portfolio context
+Keep this key server-side. The site works without it; the assistant shows a retry/email fallback when unavailable. The existing chat route uses OpenRouter with `openai/gpt-oss-20b:free`.
 
-## 🌐 Live Demo
+## Build and check
 
-[Visit Portfolio](https://portfolio-v2-sage-three.vercel.app/)
+```sh
+npm run build
+npm run start
+npm run lint
+```
 
-## 📞 Contact
+## Update content
 
-- Email: ksadithyan.mec@gmail.com
-- LinkedIn: https://www.linkedin.com/in/adithyanks2000/
+- `app/data/projects.js` is the shared source for project cards, detail pages, and personal project context in the assistant.
+- `app/data/adithyanContext.js` contains professional background for the assistant.
+- Home-page experience and skills live in `app/components/Experience.js` and `app/components/Skills.js`.
+- `public/profile.jpg` and `public/resume.pdf` are the existing portrait and résumé.
 
-## 📝 License
+Project previews are labeled illustrations, not live requests. The FastAPI project is described as ongoing learning work.
 
-This project is open source and available under the MIT License.
+## Links
+
+- [Portfolio](https://portfolio-v2-sage-three.vercel.app/)
+- [GitHub](https://github.com/Adithyan2000)
+- [LinkedIn](https://www.linkedin.com/in/adithyanks2000/)

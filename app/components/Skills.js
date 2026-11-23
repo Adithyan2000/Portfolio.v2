@@ -1,43 +1,89 @@
-function Skills() {
-  const skills = [
-    "React.js",
-    "JavaScript",
-    "Redux Toolkit",
-    "HTML/CSS",
-    "Drupal",
-    "Responsive Design",
-  ];
+import Image from "next/image";
 
+const skillGroups = [
+  {
+    title: "The frontend",
+    subtitle: "Where I feel at home",
+    skills: [
+      "React",
+      "Next.js",
+      "JavaScript",
+      "Redux",
+      "HTML & CSS",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    title: "The backend",
+    subtitle: "What I’m exploring",
+    skills: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "SQLite",
+      "Pydantic",
+      "Alembic",
+    ],
+  },
+];
+
+export default function Skills() {
   return (
-    <section className="px-6 pt-8 pb-0 sm:px-10 lg:px-12">
-      <div className="mx-auto max-w-6xl">
-        <div className="mb-6 max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-[0.24em] text-sky-300/80">
-            Skills & expertise
-          </p>
-          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Built for modern frontend work.
+    <section
+      id="about"
+      className="section about-section container"
+      aria-labelledby="about-heading"
+    >
+      <div className="about-grid">
+        <div className="about-profile">
+          <div className="portrait-frame">
+            <Image
+              src="/profile.jpg"
+              alt="Portrait of Adithyan K S"
+              fill
+              sizes="(max-width: 640px) 220px, 280px"
+              className="portrait"
+            />
+          </div>
+          <span className="portrait-caption">Adithyan K S / Developer</span>
+        </div>
+        <div className="about-copy">
+          <p className="eyebrow">A little about me</p>
+          <h2 id="about-heading">
+            Curious by nature.
+            <br />A builder by practice.
           </h2>
-          <p className="mt-4 text-base leading-7 text-slate-400 sm:text-lg">
-            Core technologies and capabilities used to craft polished,
-            high-performance web applications.
+          <p>
+            I’m a frontend developer with around three years of experience
+            turning complex requirements into interfaces that feel simple. My
+            work spans reusable React components, analytics dashboards, and
+            survey platforms.
           </p>
+          <p>
+            These days, I’m following that curiosity beyond the browser. I’m
+            learning Python backend development by building a FastAPI todo API,
+            working through authentication, data relationships, and migrations.
+          </p>
+          <a href="/resume.pdf" className="text-link resume-link" download>
+            Download my résumé <span className="file-label">PDF</span>
+          </a>
         </div>
-
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {skills.map((skill, index) => (
-            <div
-              key={skill}
-              className="rounded-[1.5rem] border border-slate-800/90 bg-slate-900/85 p-5 text-center shadow-[0_15px_40px_-32px_rgba(15,23,42,0.8)] transition duration-300 hover:-translate-y-1 hover:border-sky-500/30 hover:shadow-sky-500/10 motion-reduce:transition-none animate-[fadeInUp_0.45s_ease-out_forwards] opacity-0"
-              style={{ animationDelay: `${index * 70}ms` }}
-            >
-              <p className="text-base font-semibold text-slate-100">{skill}</p>
+      </div>
+      <div className="skills-grid">
+        {skillGroups.map((group) => (
+          <div className="skill-group" key={group.title}>
+            <div className="skill-group-heading">
+              <h3>{group.title}</h3>
+              <span>{group.subtitle}</span>
             </div>
-          ))}
-        </div>
+            <ul className="skill-list">
+              {group.skills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );
 }
-
-export default Skills;

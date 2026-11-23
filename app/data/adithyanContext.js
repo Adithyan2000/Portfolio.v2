@@ -1,7 +1,25 @@
+import { projects } from "./projects";
+
 export const adithyanContext = {
   name: "Adithyan K S",
 
   role: "Frontend Engineer",
+
+  currentFocus:
+    "Learning Python backend development through a FastAPI todo application with authentication, SQLAlchemy, SQLite, Pydantic, and Alembic migrations. This is an ongoing learning project.",
+
+  github: "https://github.com/Adithyan2000",
+
+  personalProjects: projects.map(
+    ({ title, description, tags, github, status, features }) => ({
+      name: title,
+      description,
+      technologies: tags,
+      github,
+      status,
+      features,
+    }),
+  ),
 
   experience: "3 years of professional experience",
 
